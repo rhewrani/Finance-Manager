@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <italic>false</italic>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Finance Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::GoHome"/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #f0f2f5;
+	color: black;
+    border: none;
+}
+
+QDialog {
+    background-color: #f0f2f5;
+	color: black;
+    border: none;
+}
+
+QMessageBox {
+	background-color: #f0f2f5;
+	color: black;
+    border: none;
+}
+
+QMenuBar {
+    background-color: #2c3e50;
+    color: white;
+}
+
+QMenuBar::item:selected {
+    background-color: #34495e;
+    color: white;
+}
+
+QMenu {
+	background-color: #f0f2f5;
+}
+
+QMenu::item:selected {
+    background-color: #d3dff2;
+	color: black;
+}
+
+QMenu::item:pressed {
+    background-color: #c1cfe3;
+	color: black;
+}
+
+QToolBar {
+    background-color: #34495e;
+    border: none;
+    padding: 5px;
+}
+
+QPushButton, QToolButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    min-height: 20px;
+    font-size: 11px;
+}
+
+QPushButton:hover, QToolButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed, QToolButton:pressed {
+    background-color: #21618c;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+QTableWidget {
+    background-color: white;
+    alternate-background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    gridline-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+QTableWidget::item {
+    padding: 3px;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+QTableWidget::item:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+QHeaderView::section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QComboBox {
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 3px 20px 3px 6px;
+    min-width: 80px;
+    min-height: 22px;
+    font-size: 13px;
+}
+
+QComboBox:focus {
+    border-color: #3498db;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 16px;
+    border-left: 1px solid #bdc3c7;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/img/chevron-down.png);
+    width: 10px;
+    height: 10px;
+    subcontrol-position: center;
+    subcontrol-origin: padding;
+}
+
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    selection-background-color: #3498db;
+    selection-color: white;
+    outline: none;
+    padding: 2px;
+    font-size: 13px;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: 4px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+QLineEdit {
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 2px 4px;
+    selection-background-color: #3498db;
+    min-height: 20px;
+}
+
+QLineEdit:focus {
+    border-color: #3498db;
+}
+
+/* ✅ Vollständig überarbeitete Spinboxen */
+QSpinBox {
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 2px 20px 2px 4px;
+    min-height: 22px;
+    font-size: 13px;
+}
+
+QSpinBox:focus {
+    border-color: #3498db;
+}
+
+/* ✅ Up-Button */
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 18px;
+    height: 14px;
+    border-left: 1px solid #bdc3c7;
+    border-bottom: 1px solid #bdc3c7;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0px;
+    background-color: #ecf0f1;
+    image: url(:/img/chevron-up.png);
+    image-position: center;
+}
+
+/* ✅ Down-Button */
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 18px;
+    height: 14px;
+    border-left: 1px solid #bdc3c7;
+    border-top: 1px solid #bdc3c7;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 0px;
+    background-color: #ecf0f1;
+    image: url(:/img/chevron-down.png);
+    image-position: center;
+}
+
+/* ✅ Hover-Effekte */
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #d5dbdb;
+}
+
+/* ✅ Gedrückt-Effekte */
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
+    background-color: #bdc3c7;
+}
+
+/* ✅ Deaktiviert-Effekte */
+QSpinBox::up-button:disabled, QSpinBox::down-button:disabled {
+    background-color: #ecf0f1;
+    color: #bdc3c7;
+}
+
+/* ✅ Vollständig überarbeitete Checkboxen */
+QCheckBox {
+    spacing: 5px;
+    color: #2c3e50;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bdc3c7;
+    border-radius: 3px;
+    background: white;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #3498db;
+}
+
+QCheckBox::indicator:pressed {
+    background-color: #ecf0f1;
+}
+
+/* ✅ Checkbox mit Haken-Icon */
+QCheckBox::indicator:checked {
+    background-color: white;        /* ✅ Weißer Hintergrund */
+    border-color: #3498db;          /* ✅ Blauer Rand */
+    image: url(:/img/checkmark.png); /* ✅ Haken-Icon */
+    image-position: center;         /* ✅ Zentriert */
+}
+
+QCheckBox::indicator:checked:hover {
+    border-color: #2980b9;          /* ✅ Dunklerer Rand bei Hover */
+}
+
+QCheckBox::indicator:checked:pressed {
+    background-color: #ecf0f1;      /* ✅ Hintergrund bei Druck */
+}
+
+QCheckBox::indicator:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+QCheckBox::indicator:indeterminate {
+    background-color: #f39c12;
+    border-color: #d68910;
+    image: none;
+}
+
+QCheckBox:disabled {
+    color: #bdc3c7;  /* ✅ Textfarbe grau */
+}
+
+QCheckBox::indicator:disabled {
+    background-color: #ecf0f1;  /* ✅ Hintergrund grau */
+    border-color: #bdc3c7;      /* ✅ Rand grau */
+}
+
+QCheckBox::indicator:checked:disabled {
+    background-color: white;        /* ✅ Weißer Hintergrund */
+    border-color: #bdc3c7;          /* ✅ Grauer Rand */
+    image: url(:/img/checkmark.png); /* ✅ Icon bleibt erhalten */
+    image-position: center;
+}
+
+QCheckBox::indicator:indeterminate:disabled {
+    background-color: #ecf0f1;
+    border-color: #bdc3c7;
+    image: none;
+}
+
+QGroupBox {
+    font-weight: bold;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    margin-top: 1ex;
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 8px;
+    padding: 0 4px;
+    background-color: #f0f2f5;
+}
+
+QScrollBar:vertical {
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #bdc3c7;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #3498db;
+}
+
+/* ✅ Zurücksetzen von MessageBox-Styles */
+QMessageBox QPushButton {
+    background-color: palette(button);
+    color: palette(button-text);
+    border: 1px solid palette(mid);
+    border-radius: 4px;
+    padding: 4px 8px;
+    min-width: 75px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: palette(light);
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: palette(dark);
+}
+
+QMessageBox QPushButton:default {
+    border: 2px solid palette(highlight);
+}</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::TabShape::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Line" name="LINE_RES_HOR">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>971</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LN_RES">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>650</y>
+      <width>511</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>37</pointsize>
+      <italic>false</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+      <fontweight>DemiBold</fontweight>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>0,00 €</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_RES">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>630</y>
+      <width>161</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>NETTO PROFIT:</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="TBL_INC">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>440</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>441</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollMode::ScrollPerItem</enum>
+    </property>
+    <property name="horizontalScrollMode">
+     <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::PenStyle::SolidLine</enum>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>28</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Amount</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Interval</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Description</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="TBL_EXP">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>100</y>
+      <width>440</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>441</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollMode::ScrollPerItem</enum>
+    </property>
+    <property name="horizontalScrollMode">
+     <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::PenStyle::SolidLine</enum>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Amount</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Interval</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Description</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLineEdit" name="LN_RES_EXP">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>550</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+      <fontweight>DemiBold</fontweight>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>0,00 EUR</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LN_RES_INC">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>550</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+      <fontweight>DemiBold</fontweight>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>0,00 EUR</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_RES_INC">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>540</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string> TOTAL INCOME:</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_RES_EXP">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>540</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string> TOTAL EXPENSES:</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_INC">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>40</y>
+      <width>371</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>INCOME LIST</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_EXP">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>40</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>EXPENSES LIST</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_OPEN_INC">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>55</y>
+      <width>40</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_OPEN_EXP">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>55</y>
+      <width>40</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_MTH">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>650</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Show only monthly</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="actionOpen_configuration"/>
+    <addaction name="actionSave_all"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_backup"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionOpen_settings"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionInfo"/>
+   </widget>
+   <addaction name="menuSettings"/>
+   <addaction name="menuData"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_settings">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+   </property>
+   <property name="text">
+    <string>Open Settings...</string>
+   </property>
+  </action>
+  <action name="actionOpen_configuration">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentProperties"/>
+   </property>
+   <property name="text">
+    <string>Open configuration...</string>
+   </property>
+  </action>
+  <action name="actionSave_all">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentSave"/>
+   </property>
+   <property name="text">
+    <string>Save all</string>
+   </property>
+  </action>
+  <action name="actionLoad_backup">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentOpen"/>
+   </property>
+   <property name="text">
+    <string>Load backup...</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::HelpAbout"/>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::AboutRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

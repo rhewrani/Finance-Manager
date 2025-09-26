@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/stylesheets">
+        <file>mainwindow.css</file>
+    </qresource>
+    <qresource prefix="/img">
+        <file>chevron-down.png</file>
+        <file>chevron-up.png</file>
+        <file>checkmark.png</file>
+    </qresource>
+</RCC>
