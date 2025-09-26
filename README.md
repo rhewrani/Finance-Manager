@@ -15,6 +15,10 @@ Manage your income and expenses efficiently. Track your financial data over time
 *   **Settings Management:** Customize the application behavior (language, currency, date format, backup settings).
 *   **Cross-Platform:** Built with Qt, aiming for compatibility across Windows, macOS, and Linux.
 
+## Preview
+
+![Main Window](screenshots/mainpage.png)
+
 ## Installation
 
 ### From Release (Recommended - Windows)
@@ -47,6 +51,17 @@ Manage your income and expenses efficiently. Track your financial data over time
     ```bash
     cmake ..
     ```
+    *   **Note:** If CMake cannot find Qt automatically, you might get an error like `Could not find a package configuration file provided by "QT"`. In this case, you need to tell CMake where Qt is installed.
+    *   **Solution:** Add the `-DQT_DIR` parameter to specify the path to Qt's CMake configuration files.
+
+    **Example (Windows, Qt 6.x installed in `C:\Qt\6.9.1\msvc2022_64`):**
+    ```bash
+    cmake .. -DQT_DIR="C:/Qt/6.9.1/msvc2022_64/lib/cmake/Qt6"
+    ```
+    *   **Important:**
+        *   Replace `C:/Qt/6.9.1/msvc2022_64` with the actual path to your Qt installation.
+        *   Ensure the path points to the directory containing `Qt6Config.cmake` (or `Qt5Config.cmake` for Qt 5).
+        *   Use forward slashes (`/`) or double backslashes (`\\`) in the path.
 4.  Build the project:
     ```bash
     cmake --build . --config Release
