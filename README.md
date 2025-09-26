@@ -24,7 +24,7 @@ Manage your income and expenses efficiently. Track your financial data over time
 ### From Release (Recommended - Windows)
 
 1.  Visit the [Releases](https://github.com/rhewrani/Finance-Manager/releases) page.
-2.  Download the latest `Setup_Finance_Manager_vX.X.X.exe`.
+2.  Download the latest `Setup_Finance_Manager-vX.X.X.exe`.
 3.  Run the downloaded executable and follow the installer instructions.
 
 ### Building From Source
