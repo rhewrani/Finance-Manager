@@ -94,7 +94,9 @@ void MainWindow::MainPage_updateDataFrontendIncome(const QMap<int, QJsonObject> 
         count += amount;
 
         QString intervalStr;
-        if (interval == 1) {
+        if (interval == 0) {
+            intervalStr = _("EW_CMBX_ONT");
+        } else if (interval == 1) {
             intervalStr = _("EW_CMBX_MTH");
             countStrict += amount;
         } else if (interval == 3) {
@@ -152,7 +154,9 @@ void MainWindow::MainPage_updateDataFrontendExpenses(const QMap<int, QJsonObject
         count += amount;
 
         QString intervalStr;
-        if (interval == 1) {
+        if (interval == 0) {
+            intervalStr = _("EW_CMBX_ONT");
+        } else if (interval == 1) {
             intervalStr = _("EW_CMBX_MTH");
             countStrict += amount;
         } else if (interval == 3) {

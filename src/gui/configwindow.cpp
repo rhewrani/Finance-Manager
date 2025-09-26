@@ -131,7 +131,9 @@ void Configwindow::cw_loadDataIncTable(bool resize)
         QString amountStr = QString::number(converted, 'f', 2).replace('.', ',') + " " + CurrencyConverter::instance()->currencySymbol(manager->getSettingsStruct().intCurrency);
 
         QString intervalStr;
-        if (interval == 1) {
+        if (interval == 0) {
+            intervalStr = _("EW_CMBX_ONT");
+        } else if (interval == 1) {
             intervalStr = _("EW_CMBX_MTH");
         } else if (interval == 3) {
             intervalStr = _("EW_CMBX_QRT");
@@ -181,7 +183,9 @@ void Configwindow::cw_loadDataExpTable(bool resize)
             QString amountStr = QString::number(converted, 'f', 2).replace('.', ',') + " " + CurrencyConverter::instance()->currencySymbol(manager->getSettingsStruct().intCurrency);
 
             QString intervalStr;
-            if (interval == 1) {
+            if (interval == 0) {
+                intervalStr = _("EW_CMBX_ONT");
+            } else if (interval == 1) {
                 intervalStr = _("EW_CMBX_MTH");
             } else if (interval == 3) {
                 intervalStr = _("EW_CMBX_QRT");
