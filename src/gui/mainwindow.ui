@@ -163,7 +163,7 @@ QComboBox::drop-down {
 }
 
 QComboBox::down-arrow {
-	image: url(:/img/chevron-down.png);
+	image: url(:/images/chevron-down.png);
     width: 10px;
     height: 10px;
     subcontrol-position: center;
@@ -202,7 +202,6 @@ QLineEdit:focus {
     border-color: #3498db;
 }
 
-/* ✅ Vollständig überarbeitete Spinboxen */
 QSpinBox {
     background-color: white;
     border: 2px solid #bdc3c7;
@@ -216,7 +215,6 @@ QSpinBox:focus {
     border-color: #3498db;
 }
 
-/* ✅ Up-Button */
 QSpinBox::up-button {
     subcontrol-origin: border;
     subcontrol-position: top right;
@@ -227,11 +225,10 @@ QSpinBox::up-button {
     border-top-right-radius: 2px;
     border-bottom-left-radius: 0px;
     background-color: #ecf0f1;
-    image: url(:/img/chevron-up.png);
+    image: url(:/images/chevron-up.png);
     image-position: center;
 }
 
-/* ✅ Down-Button */
 QSpinBox::down-button {
     subcontrol-origin: border;
     subcontrol-position: bottom right;
@@ -242,27 +239,23 @@ QSpinBox::down-button {
     border-bottom-right-radius: 2px;
     border-top-left-radius: 0px;
     background-color: #ecf0f1;
-    image: url(:/img/chevron-down.png);
+    image: url(:/images/chevron-down.png);
     image-position: center;
 }
 
-/* ✅ Hover-Effekte */
 QSpinBox::up-button:hover, QSpinBox::down-button:hover {
     background-color: #d5dbdb;
 }
 
-/* ✅ Gedrückt-Effekte */
 QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
     background-color: #bdc3c7;
 }
 
-/* ✅ Deaktiviert-Effekte */
 QSpinBox::up-button:disabled, QSpinBox::down-button:disabled {
     background-color: #ecf0f1;
     color: #bdc3c7;
 }
 
-/* ✅ Vollständig überarbeitete Checkboxen */
 QCheckBox {
     spacing: 5px;
     color: #2c3e50;
@@ -286,20 +279,19 @@ QCheckBox::indicator:pressed {
     background-color: #ecf0f1;
 }
 
-/* ✅ Checkbox mit Haken-Icon */
 QCheckBox::indicator:checked {
-    background-color: white;        /* ✅ Weißer Hintergrund */
-    border-color: #3498db;          /* ✅ Blauer Rand */
-    image: url(:/img/checkmark.png); /* ✅ Haken-Icon */
-    image-position: center;         /* ✅ Zentriert */
+    background-color: white;
+    border-color: #3498db;
+    image: url(:/images/checkmark.png);
+    image-position: center;
 }
 
 QCheckBox::indicator:checked:hover {
-    border-color: #2980b9;          /* ✅ Dunklerer Rand bei Hover */
+    border-color: #2980b9;
 }
 
 QCheckBox::indicator:checked:pressed {
-    background-color: #ecf0f1;      /* ✅ Hintergrund bei Druck */
+    background-color: #ecf0f1;
 }
 
 QCheckBox::indicator:focus {
@@ -314,18 +306,18 @@ QCheckBox::indicator:indeterminate {
 }
 
 QCheckBox:disabled {
-    color: #bdc3c7;  /* ✅ Textfarbe grau */
+    color: #bdc3c7;
 }
 
 QCheckBox::indicator:disabled {
-    background-color: #ecf0f1;  /* ✅ Hintergrund grau */
-    border-color: #bdc3c7;      /* ✅ Rand grau */
+    background-color: #ecf0f1;
+    border-color: #bdc3c7;
 }
 
 QCheckBox::indicator:checked:disabled {
-    background-color: white;        /* ✅ Weißer Hintergrund */
-    border-color: #bdc3c7;          /* ✅ Grauer Rand */
-    image: url(:/img/checkmark.png); /* ✅ Icon bleibt erhalten */
+    background-color: white;
+    border-color: #bdc3c7;
+    image: url(:/images/checkmark.png);
     image-position: center;
 }
 
@@ -367,7 +359,6 @@ QScrollBar::handle:vertical:hover {
     background: #3498db;
 }
 
-/* ✅ Zurücksetzen von MessageBox-Styles */
 QMessageBox QPushButton {
     background-color: palette(button);
     color: palette(button-text);

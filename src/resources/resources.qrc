@@ -1,7 +1,7 @@
 <RCC>
-    <qresource prefix="/img">
-        <file>chevron-down.png</file>
-        <file>chevron-up.png</file>
-        <file>checkmark.png</file>
+    <qresource prefix="/">
+        <file>images/checkmark.png</file>
+        <file>images/chevron-down.png</file>
+        <file>images/chevron-up.png</file>
     </qresource>
 </RCC>

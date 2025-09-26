@@ -1,0 +1,21 @@
+{
+    "app": {
+        "version": "1.0"
+    },
+    "data": {
+        "autoSave": true,
+        "backupOnExit": true,
+        "dataPath": "data.json",
+        "maxBackups": 3
+    },
+    "features": {
+        "confirmDelete": true,
+        "devtoolsEnabled": false,
+        "enableLogging": false
+    },
+    "user": {
+        "currency": 0,
+        "dateFormat": 0,
+        "language": 0
+    }
+}

@@ -1,6 +1,6 @@
 #include "info.h"
 #include "ui_info.h"
-#include "core/manager.h"
+#include "../core/manager.h"
 
 Info::Info(Manager *managerRef, QWidget *parent)
     : QDialog(parent)

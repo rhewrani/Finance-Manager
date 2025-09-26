@@ -1,7 +1,7 @@
 #ifndef SETTINGSWINDOW_H
 #define SETTINGSWINDOW_H
 
-#include "core/manager.h"
+#include "../core/manager.h"
 #include <QDialog>
 
 class Manager;

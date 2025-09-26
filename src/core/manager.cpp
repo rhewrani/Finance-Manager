@@ -1,4 +1,4 @@
-#include "gui/mainwindow.h"
+#include "../gui/mainwindow.h"
 
 Manager::Manager(MainWindow *mainWindowRef, QObject *parent)
     : QObject{parent}

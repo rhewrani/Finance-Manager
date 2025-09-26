@@ -1,0 +1,12 @@
+{
+    "income": [
+    ],
+    "expenses": [
+    ],
+    "totalSum": 0,
+    "incSum": 0,
+    "incSumStrict": 0,
+    "expSum": 0,
+    "expSumStrict": 0,
+    "date": ""
+}

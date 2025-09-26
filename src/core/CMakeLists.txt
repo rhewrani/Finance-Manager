@@ -1,21 +1,8 @@
-set(CORE_SOURCES
-    manager.cpp
-    fileagent.cpp
-    utils.cpp
-    lang.cpp
-)
+# src/core/CMakeLists.txt
 
-set(CORE_HEADERS
-    manager.h
-    fileagent.h
-    utils.h
-    lang.h
+target_sources(Finance_Manager PRIVATE
+    fileagent.h fileagent.cpp
+    lang.h lang.cpp
+    manager.h manager.cpp
+    utils.h utils.cpp
 )
-
-add_library(core_lib STATIC
-    ${CORE_SOURCES}
-    ${CORE_HEADERS}
-)
-
-target_include_directories(core_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(core_lib PRIVATE Qt${QT_VERSION_MAJOR}::Core)
