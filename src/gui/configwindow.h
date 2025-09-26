@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <qtablewidget.h>
-#include "entrywizard.h"
+#include "dialogs/entrywizard.h"
 
 class Manager;
 

@@ -1,6 +1,6 @@
 #include "entrywizard.h"
 #include "ui_entrywizard.h"
-#include "manager.h"
+#include "core/manager.h"
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>
 #include <qpushbutton.h>

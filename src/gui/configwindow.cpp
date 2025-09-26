@@ -1,6 +1,6 @@
 #include "configwindow.h"
 #include "ui_configwindow.h"
-#include "manager.h"
+#include "core/manager.h"
 #include <QTimer>
 
 Configwindow::Configwindow(Manager *managerRef, QWidget *parent)

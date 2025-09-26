@@ -2,10 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "manager.h"
+#include "core/manager.h"
 #include "configwindow.h"
 #include "settingswindow.h"
-#include "info.h"
+#include "dialogs/info.h"
 
 
 QT_BEGIN_NAMESPACE
