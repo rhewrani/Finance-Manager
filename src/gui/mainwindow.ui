@@ -46,6 +46,10 @@
     border: none;
 }
 
+QLabel {
+	color: black;
+}
+
 QDialog {
     background-color: #f0f2f5;
 	color: black;
